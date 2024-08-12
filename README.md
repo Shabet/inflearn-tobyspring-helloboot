@@ -5,3 +5,9 @@
 - Spring boot 3.3.2
 - Java 21
 - Spring Web plugin 추가
+
+# test
+- in terminal,
+```
+http -v ":8080/hello?name=Spring"
+```

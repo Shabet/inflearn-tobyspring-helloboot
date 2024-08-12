@@ -1,4 +1,4 @@
-package tobyspring.helloboot.V5;
+package tobyspring.helloboot.V6;
 
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
@@ -7,7 +7,7 @@ import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 //
-// DispatcherServlet으로 전환
+// 애노테이션 매핑 정보 사용
 //
 public class HellobootApplication {
 
