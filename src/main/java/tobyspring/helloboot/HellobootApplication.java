@@ -1,4 +1,4 @@
-package tobyspring.helloboot.V12;
+package tobyspring.helloboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
@@ -26,6 +26,6 @@ public class HellobootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HellobootApplication.class, args);
-    }
+    } 
 
 }
