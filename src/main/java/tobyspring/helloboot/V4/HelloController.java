@@ -3,10 +3,10 @@ package tobyspring.helloboot.V4;
 import java.util.Objects;
 
 public class HelloController {
-    private final HelloService helloSerivce;
+    private final HelloService helloService;
 
-    public HelloController(HelloService helloSerivce) {
-        this.helloSerivce = helloSerivce;
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
     }
 
     public String hello(String name) {

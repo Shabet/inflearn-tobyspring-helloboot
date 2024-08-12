@@ -15,11 +15,11 @@ import java.util.Objects;
 //@MyComponent
 //public class HelloController implements ApplicationContextAware {
 public class HelloController{
-    private final HelloService helloSerivce;
+    private final HelloService helloService;
     private ApplicationContext applicationContext;
 
-    public HelloController(HelloService helloSerivce, ApplicationContext applicationContext) {
-        this.helloSerivce = helloSerivce;
+    public HelloController(HelloService helloService, ApplicationContext applicationContext) {
+        this.helloService = helloService;
         this.applicationContext = applicationContext;
 
         System.out.println(applicationContext);

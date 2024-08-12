@@ -11,10 +11,10 @@ import java.util.Objects;
 @Controller
 @RequestMapping("/hello")
 public class HelloController {
-    private final HelloService helloSerivce;
+    private final HelloService helloService;
 
-    public HelloController(HelloService helloSerivce) {
-        this.helloSerivce = helloSerivce;
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
     }
 
     @GetMapping
