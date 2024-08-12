@@ -28,10 +28,6 @@ public class HellobootApplication {
 
         ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
         WebServer webServer = serverFactory.getWebServer(servletContext -> {
-<<<<<<< HEAD
-=======
-
->>>>>>> bc07bba1a06dc8b32fc4fb09c7dfeebf2c416346
             servletContext.addServlet("frontcontroller", new HttpServlet() {
                 @Override
                 protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
