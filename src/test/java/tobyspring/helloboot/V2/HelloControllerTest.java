@@ -1,11 +1,9 @@
-package tobyspring.helloboot;
+package tobyspring.helloboot.V2;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import tobyspring.helloboot.V2.HelloController;
 
-//
-// DI와 단위 테스트
-//
 public class HelloControllerTest {
     @Test
     void helloController() {

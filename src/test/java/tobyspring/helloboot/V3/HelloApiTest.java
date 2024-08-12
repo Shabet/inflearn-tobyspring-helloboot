@@ -1,16 +1,14 @@
-package tobyspring.helloboot;
+package tobyspring.helloboot.V3;
 
-import org.assertj.core.api.Assertions;
-import org.assertj.core.api.ObjectAssert;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.*;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//
-// 테스트 코드를 이용한 테스트
-//
 public class HelloApiTest {
     @Test
     void helloApi() {

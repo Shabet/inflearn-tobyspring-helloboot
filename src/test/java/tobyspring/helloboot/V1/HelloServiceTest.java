@@ -1,13 +1,28 @@
-package tobyspring.helloboot;
+package tobyspring.helloboot.V1;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-//
-// DI와 단위 테스트
-//
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@UnitTest
+@interface FastUnitTest {
+}
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD})
+@Test
+@interface UnitTest {
+}
+
 public class HelloServiceTest {
-    @Test
+//    @UnitTest
+    @FastUnitTest
     void simpleHelloService() {
         SimpleHelloService helloService = new SimpleHelloService();
 
