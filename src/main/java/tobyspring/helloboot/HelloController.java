@@ -13,11 +13,11 @@ import java.util.Objects;
 //@MyComponent
 //public class HelloController implements ApplicationContextAware {
 public class HelloController{
-    private final HelloService helloSerivce;
+    private final HelloService helloService;
     private ApplicationContext applicationContext;
 
-    public HelloController(HelloService helloSerivce, ApplicationContext applicationContext) {
-        this.helloSerivce = helloSerivce;
+    public HelloController(HelloService helloService, ApplicationContext applicationContext) {
+        this.helloService = helloService;
         this.applicationContext = applicationContext;
 
         System.out.println(applicationContext);
@@ -28,9 +28,10 @@ public class HelloController{
 //    @ResponseBody
     // ref) https://velog.io/@ghwns9991/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B6%80%ED%8A%B8-3.2-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98-%EC%9D%B4%EB%A6%84-%EC%9D%B8%EC%8B%9D-%EB%AC%B8%EC%A0%9C
     public String hello(@RequestParam("name") String name) {
-        SimpleHelloService helloService = new SimpleHelloService();
+        if (name == null || name.trim().length() == 0) throw new IllegalArgumentException();
 
-        return helloService.sayHello(Objects.requireNonNull(name));
+        return helloService.sayHello(name);
+//        return helloService.sayHello(Objects.requireNonNull(name));
     }
 
 /*    @Override
